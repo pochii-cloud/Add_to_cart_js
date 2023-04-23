@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "productName": "Keyboard",
+      "productImg": "https://imgs.search.brave.com/7I57aX4eYRaU9EXJfdAKZZhXgBv4fQVV1iUu-YuDJ0k/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/bWF4LzgxMzYvMSp0/QmowWE0wRFFWVDRU/NkxGS016bk53LnBu/Zw",
+      "productDescription": "\nInternational keyboard layouts in 2017 | by Marcin Wichary",
+      "productPrice": "3000",
+      "id": 3,
+      "price":400,
+      "quantity":0
+    },
+    {
+      "productName": "Desktop",
+      "productImg": "https://imgs.search.brave.com/-kKJnrY_LSxVKjiJSsVwosfmCPpvgYQ4pkDg9dNt-Kc/rs:fit:1200:1080:1/g:ce/aHR0cHM6Ly93d3cu/Z2FtZXNsaWZlLmdy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE2/LzA5L1JPQ0NBVF9T/a2x0X0Rlc2t0b3Bf/MDEtcmlnaHRfR1JZ/LUxhcmdlLmpwZw",
+      "productDescription": "\nROCCAT",
+      "productPrice": "100000",
+      "id": 5,
+      "price":4000,
+      "quantity":0
+    },
+    {
+      "productName": "Bed",
+      "productImg": "https://imgs.search.brave.com/lNzMjQ7UabEAKd7c6lzFzHM3Z6Zs1hEa7IrRfiJpt2s/rs:fit:1200:999:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvZTY5/ZjMyZGYtN2I0ZC00/OGQ2LWFjM2MtOWQ1/OTI0MTY4ZDE2XzEu/OTdhNjFjM2Y5YzFi/YWNhNzY2M2M0MDg2/MjY3YWQ2MGMuanBl/Zw",
+      "productDescription": "A soft Pillow!!",
+      "productPrice": "5000",
+      "id": 6,
+      "price":3500,
+      "quantity":0
+    },
+    {
+      "productName": "Bed",
+      "productImg": "https://imgs.search.brave.com/lNzMjQ7UabEAKd7c6lzFzHM3Z6Zs1hEa7IrRfiJpt2s/rs:fit:1200:999:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvZTY5/ZjMyZGYtN2I0ZC00/OGQ2LWFjM2MtOWQ1/OTI0MTY4ZDE2XzEu/OTdhNjFjM2Y5YzFi/YWNhNzY2M2M0MDg2/MjY3YWQ2MGMuanBl/Zw",
+      "productDescription": "A soft Pillow!!",
+      "productPrice": "5000",
+      "id": 7,
+      "price":4000,
+      "quantity":0
+    }
+  ]
+}
