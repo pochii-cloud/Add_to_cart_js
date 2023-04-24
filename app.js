@@ -85,6 +85,8 @@ class Product {
 
 }
 
+
+
 const btn = document.querySelector("#btn");
 if (btn.innerText === "Add Product") {
   btn.addEventListener("click", new Product().addProduct);
@@ -125,6 +127,7 @@ class App {
 
 App.Init();
 
+
 class Cart {
   constructor() {
     this.items = [];
@@ -159,7 +162,15 @@ class Cart {
           <ul>`;
     this.items.forEach((item) => {
       html += `
-            <li>${item.productName} - $${item.productPrice}
+            <li>${item.productName} - $${item.productPrice} 
+            <button onClick="changeQuantity(${item.id},${
+              item.quantity - 1
+            })">-</button>
+            ${item.quantity}
+            <button onClick="changeQuantity(${item.id},${
+              item.quantity + 1
+            })">+</button>
+          
               <button onclick="removeFromCart(${item.id})">Remove</button>
             </li>`;
     });
@@ -176,10 +187,20 @@ const cart = new Cart();
 
 // Function to add item to cart
 async function addToCart(productId) {
+  
   const response = await fetch("http://localhost:3000/products");
   const products = await response.json();
   const product = products.find((item) => item.id === productId);
-  cart.addItem(product);
+  product.quantity=0;
+  if(product){
+    product.quantity++
+    cart.addItem(product);
+    console.log(product.quantity)
+  }
+  else{
+    alert('error')
+  }
+  
   renderCart();
 }
 
@@ -194,5 +215,51 @@ function renderCart() {
   const cartContainer = document.querySelector("#cart-container");
   cartContainer.innerHTML = cart.render();
 }
+function changeQuantity(id) {
+  if (product.quantity == 0) {
+    delete cart.items[id];
+  } else {
+    cart.items[id].product.quantity = product.quantity;
+    cart.items[id].price = product.quantity * products[id].price;
+  }
+  renderCart();
+}
+// class Cart {
+//   static products = [];
 
+//   static addProduct(id) {
+//     const product = Cart.products.find(p => p.id === id);
+//     if (product) {
+//       product.quantity++;
+//       product.total += product.productPrice;
+//     } else {
+//       const newProduct = new Product().product;
+//       newProduct.id = product.id;
+//       newProduct.quantity = 1;
+//       newProduct.total = newProduct.productPrice;
+//       Cart.products.push(newProduct);
+//     }
+//     console.log(Cart.products);
+//     // Update cart UI
+//     const cartItems = document.querySelector(".cart-items");
+//     cartItems.innerHTML = "";
+//     for (const product of Cart.products) {
+//       const cartItem = `
+//         <div class="cart-item">
+//           <img src="${product.productImg}" alt="${product.productName}">
+//           <div class="cart-item__content">
+//             <h2>${product.productName}</h2>
+//             <h3>\$${product.productPrice}</h3>
+//             <p>Quantity: ${product.quantity}</p>
+//             <p>Total: \$${product.total.toFixed(2)}</p>
+//           </div>
+//         </div>
+//       `;
+//       cartItems.insertAdjacentHTML("beforeend", cartItem);
+//     }
+//   }
+// }
+
+
+//code to add two numbers
 

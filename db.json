@@ -6,8 +6,8 @@
       "productDescription": "\nInternational keyboard layouts in 2017 | by Marcin Wichary",
       "productPrice": "3000",
       "id": 3,
-      "price":400,
-      "quantity":0
+      "price": 400,
+      "quantity": 0
     },
     {
       "productName": "Desktop",
@@ -15,8 +15,8 @@
       "productDescription": "\nROCCAT",
       "productPrice": "100000",
       "id": 5,
-      "price":4000,
-      "quantity":0
+      "price": 4000,
+      "quantity": 0
     },
     {
       "productName": "Bed",
@@ -24,8 +24,8 @@
       "productDescription": "A soft Pillow!!",
       "productPrice": "5000",
       "id": 6,
-      "price":3500,
-      "quantity":0
+      "price": 3500,
+      "quantity": 0
     },
     {
       "productName": "Bed",
@@ -33,8 +33,8 @@
       "productDescription": "A soft Pillow!!",
       "productPrice": "5000",
       "id": 7,
-      "price":4000,
-      "quantity":0
+      "price": 4000,
+      "quantity": 0
     }
   ]
 }
