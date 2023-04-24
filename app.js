@@ -33,21 +33,23 @@ class Product {
       },
     });
   }
-  async updateProduct(id) {
-    const response = await fetch(`http://localhost:3000/products/${id}`);
-    const product = await response.json();
-    this.prePopulate(product);
-    const btn = document.querySelector("#btn");
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const updatedProduct = new Product().readValues();
-      if (btn.innerText === "Update Product") {
+  async updateProduct(id){
+    const response = await fetch(`http://localhost:3000/products/${id}`)
+    const product = await response.json()
+  
+   this.prePopulate(product)
+   const btn = document.querySelector("#btn")
+   btn.addEventListener('click', (e)=>{
+    e.preventDefault()
+    
+    const updatedProduct= new Product().readValues();
+    if(btn.innerText==="Update Product"){
         console.log("Updating");
-        this.sendUpdate({ ...updatedProduct, id });
-      }
-    });
-  }
+        this.sendUpdate({...updatedProduct, id})
+       }
+   })
 
+}
   async sendUpdate(product) {
     await fetch(`http://localhost:3000/products/${product.id}`, {
       method: "PUT",
